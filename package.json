@@ -1,0 +1,11 @@
+{
+  "name": "recipist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo Hola!"
+  },
+  "author": "Jono Lewis",
+  "license": "ISC"
+}
