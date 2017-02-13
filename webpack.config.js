@@ -13,10 +13,13 @@ const config = {
       {test: /\.(js|jsx)$/, use: 'babel-loader'}
     ]
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ]
-
+  devServer: {
+    compress: false,
+    publicPath: "http://localhost:8080/static/",
+    filename: "bundle.js",
+    hot: true,
+    inline: true
+  }
 };
  
 module.exports = config;

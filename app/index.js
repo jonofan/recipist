@@ -11,7 +11,7 @@ var HelloWorld = React.createClass({
  
 ReactDOM.render(
   <div>
-    <HelloWorld name="jono"/>
+    <HelloWorld name="k"/>
     <HelloWorld name="Stack Overflow" />
   </div>,
   document.querySelector("#container")
