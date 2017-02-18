@@ -9,7 +9,10 @@ const config = {
     publicPath: "static/"
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.scss', '*']
+    extensions: ['.js', '.jsx', '.scss', '.css', '*'],
+    alias: {
+      MaterialUI: path.resolve(__dirname, 'node_modules/material-ui')
+    }
   },
   module: {
     rules: [
@@ -21,7 +24,15 @@ const config = {
       {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
-      }
+      },
+      {
+          test: /\.(woff|woff2|eot|ttf|svg)$/,
+          loader: 'file-loader?name=fonts/[name].[ext]'
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
     ]
   },
   plugins: [
