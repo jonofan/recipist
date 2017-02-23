@@ -1,5 +1,7 @@
 import React from 'react';
 import RecipeList from '../views/recipe-list';
+import Paper from 'MaterialUI/Paper';
+
 
 var dummyData = 
     [
@@ -11,7 +13,7 @@ var dummyData =
         {
             name: "Curry",
             description: "It's yum. The best.",
-            imageUrl: 'http://chicago-toast.com/img/big-toast-img.png'
+            imageUrl: 'http://www.seriouseats.com/recipes/assets_c/2016/03/20160328-channa-masala-recipe-6-thumb-1500xauto-430840.jpg'
         }
     ]
 
@@ -20,8 +22,10 @@ export default class MainLayout extends React.Component {
 
     render() {
         return(
-            <div>
-                <RecipeList recipes={dummyData}/>
+            <div className="main-layout-container">
+                <Paper zDepth={2}>
+                    <RecipeList recipes={dummyData}/>
+                </Paper>
             </div>
         )
         
