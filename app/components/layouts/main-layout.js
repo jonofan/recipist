@@ -1,6 +1,7 @@
 import React from 'react';
 import RecipeList from '../views/recipe-list';
 import Paper from 'MaterialUI/Paper';
+import {Link} from 'react-router';
 
 
 var dummyData = 
@@ -23,6 +24,7 @@ export default class MainLayout extends React.Component {
     render() {
         return(
             <div className="main-layout-container">
+                <Link to='/list'>List</Link>
                 <Paper zDepth={2}>
                     <RecipeList recipes={dummyData}/>
                 </Paper>
