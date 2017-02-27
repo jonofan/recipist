@@ -28,7 +28,9 @@ export default class MainLayout extends React.Component {
                 <Paper zDepth={2}>
                     <RecipeList recipes={dummyData}/>
                 </Paper>
+                {this.props.children}
             </div>
+            
         )
         
         
